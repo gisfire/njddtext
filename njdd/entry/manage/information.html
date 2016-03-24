@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>农机综合调度指挥系统</title>
+    <link rel="stylesheet" href="../../dep/jquery-mobile/jquery.mobile-1.4.5.css" />
+    <script src="../../dep/jquery-mobile/jquery.js"></script>
+    <script src="../../dep/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+    <script>
+          
+    </script>
+
+</head>
+<body>
+
+    <div data-role="page" id="informationpage">
+        <div data-role="header">
+            <a id="a_back" data-role="button" data-rel="back" href="set.html" class="ui-btn-left" data-icon="back">返回</a>
+            <h3>用户管理信息  
+            </h3>
+        </div>
+
+
+        <div data-role="content" class="ui-content">
+            <div class="ui-field-contain" data-controltype="textinput">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">
+                                &nbsp;用户名：  
+                            </label>
+                        </td>
+                        <td>
+                            <input name="name" id="informationpage_name" placeholder="您的姓名..." value="" type="text" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="ui-field-contain" data-controltype="textinput">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="mobile_phone">
+                                &nbsp;&nbsp;手机：  
+                            </label>
+                        </td>
+                        <td>
+                            <input name="mobile_phone" id="informationpage_tel" placeholder="您的手机号码..." value="" type="tel" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="ui-field-contain" data-controltype="textinput">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="email">
+                                &nbsp;&nbsp;邮箱：  
+                            </label>
+                        </td>
+                        <td>
+                            <input name="email" id="informationpage_email" placeholder="您的E-Mail地址..." value="" type="email" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="ui-field-contain" data-controltype="selectinput">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="danwei">
+                                所属单位：  
+                            </label>
+                        </td>
+                        <td>
+                            <select name="danwei" data-icon="select" data-inline="true" id="informationpage_unit" onchange="userunit_team()">
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <div class="ui-field-contain" data-controltype="selectinput">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="car_group">
+                                &nbsp;&nbsp;车队：  
+                            </label>
+                        </td>
+                        <td>
+                            <select name="car_group" id="informationpage_team" data-icon="select" data-inline="true">
+                            </select>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+
+        <div data-role="footer">
+
+            <a id="123" data-role="button" href="#" data-icon="check" data-iconpos="left" class="ui-btn-right">保存</a>
+            <a id="deleteuser" data-role="button" href="#" data-icon="delete" data-iconpos="left" class="ui-btn-left">删除</a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
