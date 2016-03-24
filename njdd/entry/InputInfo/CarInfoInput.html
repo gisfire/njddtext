@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>农机综合调度指挥系统</title>
+        <link rel="stylesheet" href="../../dep/jquery-mobile/jquery.mobile-1.4.5.css"/>
+        <link rel="stylesheet" href="../../src/njdd/execution/exec.css"/>
+        <script src="../../dep/jquery-mobile/jquery.js"></script>
+        <script src="../../dep/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="../../src/common/config.js"></script>
+        <script type="text/javascript" src="../../src/common/dojiconfig.js"></script>
+        <script src="../../src/njdd/InputInfo/CarInfoInput.js"></script>
+        <!--textarea样式-->
+        <style type="text/css"> 
+           #textarea { overflow: hidden; width: 100%; min-height: 150px; padding:10px; } 
+       </style>
+        <script src="../../src/njdd/InputInfo/autoTextarea.js"></script>
+
+    </head>
+    <body>
+        <div data-role="page" id="carinfoinputpage">    
+            <div data-role="header" data-tap-toggle="false" data-fullscreen="true" id="Div2">
+                <!--点击返回，将返回到（页面1——信息录入主页面）-->
+                <a data-role="button" href="InfoInput.html" data-ajax="false" data-icon="back">返回</a>
+                <h1>农机车信息编辑</h1>     
+            </div>
+            <div data-role="content">
+                
+                <!--农机编号下拉框-->
+                <div role="main" class="ui-content"  data-role="fieldcontain" >
+                    <label style="float:left;font-size:15px;text-align:right;">农机编号:</label>
+                    <select data-native-menu="false" data-inline="true"  data-role="none" style="width:60%" id="carcode" onchange="toolschange()">
+                    </select>           
+                </div> 
+                <!--农机编号文本框-->
+                <div data-role="fieldcontain" >
+                    <label style="float:left;font-size:15px;text-align:right;">农机编号:</label>
+                    <input type="text" name="carbrand" data-role="none" style='display:inline-block;width:60%'/ id="carcodeinput">     
+                </div> 
+                <!--农机品牌-->
+                <div data-role="fieldcontain" >
+                    <label for="carbrand" style="float:left;font-size:15px;text-align:right;">农机品牌：</label>
+                    <input type="text" name="carbrand" id="carbrand" data-role="none" style='display:inline-block;width:60%'/>                  
+                </div>
+                <!--农机马力-->
+                <div data-role="fieldcontain" >
+                    <label for="carbrand" style="float:left;font-size:15px;text-align:right;">农机马力：</label>
+                    <input type="text" name="carbrand" id="carhorsepower" data-role="none" style='display:inline-block;width:60%'/>                  
+                </div>
+                <!--农机类型-->
+                <div role="main" class="ui-content"  data-role="fieldcontain" >
+                    <label style="float:left;font-size:15px;text-align:right;">农机类型:</label>
+                    <select data-native-menu="false" data-inline="true"  data-role="none" style="width:60%" id="cartype">
+                    </select>           
+                </div>  
+                <!--农机车主-->  
+                <div data-role="fieldcontain" >
+                    <label for="carhoster" style="float:left;font-size:15px;text-align:right;">农机车主：</label>
+                    <select data-native-menu="false" data-inline="true"  data-role="none" style="width:60%" id="owner" onchange="ownerchange()">
+                    </select>            
+                </div>
+                <!--车主电话-->
+                <div data-role="fieldcontain" >
+                    <label for="tel" style="float:left;font-size:15px;text-align:right;">车主电话：</label>
+                    <input type="text" name="tel" id="tel" data-role="none" style='display:inline-block;width:60%'/ disabled="disabled">                  
+                </div>
+                <!--所属单位-->       
+                <div role="main" class="ui-content"  data-role="fieldcontain" >
+                    <label for="teamname" style="float:left;font-size:15px;text-align:right;">所属单位：</label>
+                    <select type="text" name="unitname" id="unit" data-role="none" style='display:inline-block;width:60%'></select>                  
+                </div>
+                <!--备注-->
+                <div data-role="fieldcontain" >
+                    <p>备注</p>
+                    <!--有CSS样式-->
+                    <textarea id="textarea"></textarea> 
+                </div>
+            </div>
+    
+                    
+            <div data-role="footer">
+                <!--删除与保存按钮--> 
+                <div>
+                    <label id="caradd" style="color:#f00;display: none;">请填写农机编号！</label>
+                    <br/>
+                    <button type="button" class="btn btn-default" id="deletetools" data-inline="true"  onclick="deleteTools()"  style="margin-left:2%;width: 30%";>删除</button>
+                    <button type="button" class="btn btn-default" id="updatetools" data-inline="true"  onclick="updateTools();" style="width: 30%">修改</button>
+                    <button type="button" class="btn btn-default" id="addtools" data-inline="true"  onclick="addTools();" style="width: 30%">添加</button>
+                </div>  
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>农机综合调度指挥系统</title>
+    <link rel="stylesheet" href="../../dep/jquery-mobile/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="../../src/njdd/conduct/conduct.css" />
+    <script src="../../dep/jquery-mobile/jquery.js"></script>
+    <script src="../../dep/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="../../src/common/config.js"></script>
+    <script type="text/javascript" src="../../src/common/dojiconfig.js"></script>
+</head>
+<body>
+    <div data-role="page" id="detailinfopage">
+        <div data-role="header">
+            <a data-role="button" href="queryregionnjinfo.html" data-icon="back" data-transition="slide">返回</a>
+            <h1>详细信息</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <!--具体信息-->
+            <div class="ui-grid-b">
+               
+
+                <div class="ui-block-a" style="border: 1px solid white;"><span>农机手姓名</span></div>
+                <div class="ui-block-b" style="border: 1px solid white;"><span id="detailinfopage_username"></span></div>
+                
+                 <div class="ui-block-a" style="border: 1px solid white;"><span>农机车类型</span></div>
+                <div class="ui-block-b" style="border: 1px solid white;"><span id="detailinfopage_car_type"></span></div>
+
+                <div class="ui-block-a" style="border: 1px solid white;"><span>马力</span></div>
+                <div class="ui-block-b" style="border: 1px solid white;"><span id="detailinfopage_car_horsepower"></span></div>
+                
+                 <div class="ui-block-a" style="border: 1px solid white;"><span>所属农场</span></div>
+                <div class="ui-block-b" style="border: 1px solid white;"><span id="detailinfopage_unit_name"></span></div>
+
+                <div class="ui-block-a" style="border: 1px solid white;"><span>车牌号</span></div>
+                <div class="ui-block-b" style="border: 1px solid white;"><span id="detailinfopage_car_code"></span></div>
+
+                <div class="ui-block-a" style="border: 1px solid white;"><span>电话号码</span></div>
+                <div class="ui-block-b" style="border: 1px solid white;"><span id="detailinfopage_phone"></span></div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
